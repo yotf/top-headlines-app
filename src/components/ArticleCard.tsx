@@ -6,17 +6,17 @@ interface ArticleCardProps {
   i: number;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ article, i }) => {
-    return (
-        <div>
-            <div>{article.title}</div>
-            <img src={article.urlToImage ?? ""} />
-            <div>{article.description}</div>
-            <Link to={`/top-news/${i}`} state={{ article }}>
-                {"More >"}
-            </Link>
-        </div>
-    );
+const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+  return (
+    <div>
+      <div>{article.title}</div>
+      <img src={article.urlToImage ?? ""} />
+      <div>{article.description}</div>
+      <Link to={`/top-news/detail`} state={{ article }}>
+        {"More >"}
+      </Link>
+    </div>
+  );
 };
 
 export default ArticleCard;

@@ -11,12 +11,17 @@ import "./index.css";
 import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import DetailsPage from "./pages/DetailsPage";
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/top-news", element: <HomePage /> },
+      {
+        path: "/top-news",
+        element: <HomePage />,
+      },
+      { path: "/top-news/detail", element: <DetailsPage /> },
       { path: "*", element: <Navigate to="/top-news" replace /> },
     ],
   },
