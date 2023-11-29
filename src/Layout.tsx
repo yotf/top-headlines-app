@@ -13,7 +13,7 @@ const Layout = () => {
         handleCountryChange={handleCountryChange}
         selectedCountry={selectedCountry}
       />
-      <Outlet />
+      <Outlet context={selectedCountry} />
     </>
   );
 };
