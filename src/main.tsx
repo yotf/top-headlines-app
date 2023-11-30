@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import DetailsPage from "./pages/DetailsPage";
 import CategoriesPage from "./pages/CategoriesPage";
 import SingleCategoryPage from "./pages/SingleCategoryPage";
+import SearchPage from "./pages/SearchPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "/top-news/detail", element: <DetailsPage /> },
       { path: "/categories", element: <CategoriesPage /> },
       { path: "/categories/:category", element: <SingleCategoryPage /> },
+      { path: "/search", element: <SearchPage /> },
       { path: "*", element: <Navigate to="/top-news" replace /> },
     ],
   },
