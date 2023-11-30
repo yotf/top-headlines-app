@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import useNews from "../hooks/useNews";
 import ArticleCard from "../components/ArticleCard";
+import NewsContainer from "../components/NewsContainer";
 
 const HomePage = () => {
   const selectedCountry = useOutletContext<"us" | "gb">();
@@ -15,18 +16,7 @@ const HomePage = () => {
         Top News from{" "}
         {selectedCountry === "us" ? "United Stated" : "Great Britain"}
       </h2>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <div>
-          {articles?.map((article) => (
-            <div>
-              <ArticleCard article={article} />
-              {article.title}
-            </div>
-          ))}
-        </div>
-      )}
+      <NewsContainer articles={articles} isLoading={isLoading} />
     </div>
   );
 };
