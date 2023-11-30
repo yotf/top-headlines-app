@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { NewsCategory } from "../types";
 import useNews from "../hooks/useNews";
 import ArticleCard from "./ArticleCard";
@@ -15,13 +15,19 @@ const CategoryContainer: FC<CategoryContainerProps> = ({
   category,
   country,
 }) => {
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  const handleToggleExpand = () => {
+    setIsExpanded((prevExpanded) => !prevExpanded);
+  };
+
   const { data: articles, isLoading } = useNews(country, category, 5);
 
   const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: isExpanded ? articles?.length : 3,
     slidesToScroll: 1,
   };
 
@@ -32,6 +38,9 @@ const CategoryContainer: FC<CategoryContainerProps> = ({
       ) : (
         <div className=" m-auto w-9/12">
           <Link to={`/categories/${category}`}> {category}</Link>
+          <button onClick={handleToggleExpand}>
+            {isExpanded ? "Collapse" : "Expand"}
+          </button>
           <Slider {...sliderSettings}>
             {articles?.map((article) => <ArticleCard article={article} />)}
           </Slider>
