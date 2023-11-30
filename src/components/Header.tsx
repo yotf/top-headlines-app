@@ -7,7 +7,7 @@ type HeaderProps = {
 };
 const Header: FC<HeaderProps> = ({ selectedCountry, handleCountryChange }) => {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex items-center justify-between">
       <nav className="flex justify-between gap-4">
         <Link to={`/top-news`}>Top News</Link>
         <Link to={`/categories`}>Categories</Link>
@@ -17,7 +17,7 @@ const Header: FC<HeaderProps> = ({ selectedCountry, handleCountryChange }) => {
         <button
           className={
             selectedCountry === "us"
-              ? "text-red-400 border-b-2 border-red-400"
+              ? "border-b-2 border-red-400 text-red-400"
               : ""
           }
           onClick={() => handleCountryChange("us")}
@@ -27,7 +27,7 @@ const Header: FC<HeaderProps> = ({ selectedCountry, handleCountryChange }) => {
         <button
           className={
             selectedCountry === "gb"
-              ? "text-red-400 border-b-2 border-red-400"
+              ? "border-b-2 border-red-400 text-red-400"
               : ""
           }
           onClick={() => handleCountryChange("gb")}

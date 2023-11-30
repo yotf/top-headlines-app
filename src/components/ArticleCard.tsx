@@ -3,7 +3,6 @@ import { Article } from "../types";
 
 interface ArticleCardProps {
   article: Article;
-  i: number;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {

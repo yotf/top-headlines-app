@@ -11,3 +11,12 @@ export type Article = {
   publishedAt: string;
   content: string | null;
 };
+
+export type NewsCategory =
+  | "business"
+  | "entertainment"
+  | "general"
+  | "health"
+  | "science"
+  | "sports"
+  | "technology";

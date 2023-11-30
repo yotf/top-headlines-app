@@ -12,6 +12,8 @@ import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import DetailsPage from "./pages/DetailsPage";
+import CategoriesPage from "./pages/CategoriesPage";
+import SingleCategoryPage from "./pages/SingleCategoryPage";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       { path: "/top-news/detail", element: <DetailsPage /> },
+      { path: "/categories", element: <CategoriesPage /> },
+      { path: "/categories/:category", element: <SingleCategoryPage /> },
       { path: "*", element: <Navigate to="/top-news" replace /> },
     ],
   },
@@ -34,5 +38,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router}></RouterProvider>
     </QueryClientProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

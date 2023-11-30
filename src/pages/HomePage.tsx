@@ -6,10 +6,7 @@ const HomePage = () => {
   const selectedCountry = useOutletContext<"us" | "gb">();
 
   debugger;
-  const { data: articles, isLoading } = useNews(
-    selectedCountry,
-    "top-headlines"
-  );
+  const { data: articles, isLoading } = useNews(selectedCountry);
   debugger;
 
   return (
@@ -22,9 +19,9 @@ const HomePage = () => {
         <p>Loading...</p>
       ) : (
         <div>
-          {articles?.map((article, i) => (
+          {articles?.map((article) => (
             <div>
-              <ArticleCard article={article} i={i} />
+              <ArticleCard article={article} />
               {article.title}
             </div>
           ))}
