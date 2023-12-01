@@ -26,15 +26,18 @@ const SearchPage = () => {
   }, [articles]);
 
   return (
-    <div>
-      <h1>Search</h1>
-      <div>
+    <div className=" mx-auto mt-[10vh] flex w-10/12 flex-col items-center gap-20 text-center">
+      <div className="align-center flex w-[50%] flex-col gap-3 text-center">
+        <p>{`Search top news from ${
+          selectedCountry == "gb" ? "Great Britain" : "United States"
+        } by term`}</p>
+
         <input
           type="text"
           onChange={handleSearchChange}
           value={searchTerm}
           placeholder="Search"
-          className="rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
+          className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
         />
       </div>
       <NewsContainer articles={filteredArticles} isLoading={isLoading} />
