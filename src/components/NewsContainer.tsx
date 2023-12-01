@@ -8,17 +8,17 @@ type NewsContainerProps = {
 };
 
 const NewsContainer: FC<NewsContainerProps> = ({ articles, isLoading }) => {
+
   return (
-    <div>
+    <div className=" m-auto">
       {" "}
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 ">
           {articles?.map((article) => (
-            <div>
+            <div >
               <ArticleCard article={article} />
-              {article.title}
             </div>
           ))}
         </div>

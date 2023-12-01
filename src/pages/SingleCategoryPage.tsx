@@ -9,8 +9,10 @@ const SingleCategoryPage = () => {
   const { data: articles, isLoading } = useNews(selectedCountry, category);
 
   return (
-    <div>
-      <h1>{category}</h1>
+    <div className="mx-auto mt-[10vh] flex w-[80%] flex-col items-center gap-10">
+      <h1 className=" text-3xl capitalize">{`${category} News from the ${
+        selectedCountry == "gb" ? "Great Britain" : "United States"
+      }`}</h1>
       <NewsContainer articles={articles} isLoading={isLoading} />
     </div>
   );
