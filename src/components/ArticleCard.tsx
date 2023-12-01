@@ -25,7 +25,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
       <Link
         to={`${pathname}/detail`}
         state={{ article }}
-        className="mt-auto self-start font-semibold text-red-400 hover:text-red-500"
+        className="mt-auto self-start font-semibold text-red-400 transition duration-500 ease-in-out hover:text-red-500"
       >
         {"More >"}
       </Link>

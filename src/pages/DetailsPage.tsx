@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Article } from "../types";
+import placeholder from "./../assets/placeholder.png";
+import dayjs from "dayjs";
 
 const DetailsPage = () => {
   const location = useLocation();
@@ -13,17 +15,23 @@ const DetailsPage = () => {
           <h1 className="text-3xl">{article.title}</h1>
           <img
             className="w-[90%] rounded shadow-lg"
-            src={article.urlToImage ?? ""}
+            src={article.urlToImage ?? placeholder}
           />
           <p>
-            By {article.author} - {article.publishedAt}
+            By {article.author} -{" "}
+            {dayjs(article.publishedAt).format("DD/MM/YYYY")}
           </p>
           <p>{article.content}</p>
         </div>
       ) : (
         <h1>Article not found</h1>
       )}
-      <button onClick={() => navigate(-1)}>{"< Back to List"}</button>
+      <button
+        className="mt-10 font-semibold text-red-400 transition duration-500 ease-in-out hover:text-red-500"
+        onClick={() => navigate(-1)}
+      >
+        {"< Back to List"}
+      </button>
     </div>
   );
 };

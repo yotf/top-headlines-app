@@ -49,7 +49,7 @@ const CategoryContainer: FC<CategoryContainerProps> = ({
         <p>Loading...</p>
       ) : (
         <div className="" ref={toggleContainer}>
-          <div className="align-center; flex gap-2 px-4">
+          <div className="align-center flex gap-2 px-4">
             <button onClick={handleToggleExpand}>
               {isExpanded ? <FaAngleDown /> : <FaAngleRight />}
             </button>
@@ -62,7 +62,7 @@ const CategoryContainer: FC<CategoryContainerProps> = ({
             </Link>
           </div>
           {isExpanded && (
-            <Slider {...sliderSettings}>
+            <Slider {...sliderSettings} className="mx-10">
               {articles?.map((article) => <ArticleCard article={article} />)}
             </Slider>
           )}

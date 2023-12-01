@@ -9,10 +9,11 @@ const Header: FC<HeaderProps> = ({ selectedCountry, handleCountryChange }) => {
   const { pathname } = useLocation();
   const activeLinkStyle =
     "border-b-2 border-red-400 font-semibold text-red-400 p-4 transition duration-500 ease-in-out";
-  const inactiveLinkStyle = "text-white font-semibold hover:text-red-400 p-4";
+  const inactiveLinkStyle =
+    "text-white font-semibold hover:text-red-400 p-4 transition duration-500 ease-in-out";
 
   return (
-    <header className="m-3 flex h-10 items-center justify-between">
+    <header className="m-3 flex h-10 items-center justify-between  ">
       <nav className="flex justify-between gap-4">
         <Link
           to={`/top-news`}
