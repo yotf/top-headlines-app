@@ -1,7 +1,6 @@
-import { FC, useEffect, useRef } from "react";
+import { FC } from "react";
 import { Article } from "../types";
 import ArticleCard from "./ArticleCard";
-import autoAnimate from "@formkit/auto-animate";
 
 type NewsContainerProps = {
   articles?: Article[];

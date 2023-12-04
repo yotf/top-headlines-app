@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Article, NewsCategory } from "../types";
-const API_KEY = "a7865005d4184ca498330e77ca4bcda6";
+//const API_KEY = "a7865005d4184ca498330e77ca4bcda6";
 //const API_KEY = "9ff8a63ecc574713b7d133fea2d83e14";
+const API_KEY = "ba9f1be86ed24667b32143f10c5dcc50";
 
 const fetchNews = async (
   selectedCountry: "us" | "gb",
