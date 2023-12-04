@@ -42,7 +42,7 @@ const Header: FC<HeaderProps> = ({ selectedCountry, handleCountryChange }) => {
           Search
         </Link>
       </nav>
-      <div className="language-select flex gap-2">
+      <div className={pathname.includes("detail") ? "hidden" : " flex gap-2"}>
         <button
           className={
             selectedCountry === "us" ? activeLinkStyle : inactiveLinkStyle
