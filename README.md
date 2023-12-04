@@ -7,7 +7,7 @@
 <img width="949" alt="Screenshot 2023-12-04 101138" src="https://github.com/yotf/top-headlines-app/assets/3143490/e4ae692c-f000-4484-8c86-3911c3424de4">
 <img width="950" alt="Screenshot 2023-12-04 101119" src="https://github.com/yotf/top-headlines-app/assets/3143490/6c5eb9ea-cd72-4895-ab8d-23bd26af1ac8">
 <img width="959" alt="Screenshot 2023-12-04 101105" src="https://github.com/yotf/top-headlines-app/assets/3143490/4d67b5e8-99bc-4ad3-91fd-bf609f4a5eba">
-<img width="950" alt="Screenshot 2023-12-04 101056" src="https://github.com/yotf/top-headlines-app/assets/3143490/db5f88f4-ad06-4364-aeeb-c1c8fae9322b">
+
 
 
 
